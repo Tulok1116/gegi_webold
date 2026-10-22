@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gyógytorna - Galambos Gergely</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; line-height: 1.6; background-color: #f8fafc; color: #334155; }
+    header { background: #0f766e; color: white; padding: 30px 20px; text-align: center; }
+    
+    /* Navigation styles */
+    nav { background: #134e4a; position: relative; }
+    .nav-container { max-width: 900px; margin: auto; display: flex; justify-content: center; align-items: center; padding: 10px 20px; }
+    .nav-links { display: flex; gap: 40px; }
+    .nav-links a { color: white; text-decoration: none; font-weight: bold; }
+    .menu-toggle { display: none; background: none; border: none; color: white; font-size: 24px; cursor: pointer; }
+
+    section { padding: 40px 30px; max-width: 900px; margin: 30px auto; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+    h2 { color: #0f766e; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; margin-top: 0; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { border: 1px solid #ddd; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    footer { background: #134e4a; color: white; text-align: center; padding: 15px; }
+
+    /* Responsive styles for mobile screens */
+    @media (max-width: 768px) {
+      .nav-container { justify-content: space-between; }
+      .menu-toggle { display: block; }
+      .nav-links { display: none; flex-direction: column; width: 100%; background: #134e4a; position: absolute; top: 100%; left: 0; padding: 10px 0; text-align: center; gap: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+      .nav-links.active { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Galambos Gergely - Gyógytornász</h1>
+  <p>Fájdalomcsillapítás és mozgásjavítás személyre szabottan</p>
+</header>
+
+<nav>
+  <div class="nav-container">
+    <button class="menu-toggle" id="menuToggle" aria-label="Menü megnyitása">&#9776;</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#rolam">Rólam</a>
+      <a href="#kepzettseg">Képzettségeim</a>
+      <a href="#szolgaltatasok">Szolgáltatások</a>
+      <a href="#arak">Árak</a>
+      <a href="#kapcsolat">Elérhetőségek</a>
+    </div>
+  </div>
+</nav>
+
+<section id="rolam">
+  <h2>Rólam</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+    <div style="flex: 2; min-width: 280px;">
+  <p>Galambos Gergely vagyok, gyógytornász. A Pécsi Tudományegyetemen végeztem: 2023-ban alapszakon, majd 2026-ban mesterszakon szereztem diplomát.</p>
+  <p>A sport gyerekkorom óta az életem része, versenyszinten is űztem, így jól tudom, milyen fontos a megfelelő mozgás, a gyors regeneráció és a sérülések megelőzése.</p>
+  <p>Jelenleg a Falco KC kosárlabdacsapat fizioterapeutájaként dolgozom, ahol napi szinten segítem a sportolókat abban, hogy a legjobb formájukat hozzák. 
+    A munkám során szerzett tapasztalatokat a hozzám fordulók kezelésében is kamatoztatom, legyen szó fájdalomcsillapításról, rehabilitációról vagy teljesítményjavításról.</p>
+  <p>Bár a sportrehabilitáció kiemelt terület számomra, fontosnak tartom hangsúlyozni, hogy nem kizárólag sportolókkal foglalkozom.
+     Nagy számban segítek ülőmunkát vagy fizikai munkát végzőknek, akik nyak-, hát- vagy egyéb mozgásszervi fájdalmakkal küzdenek, valamint műtétek utáni rehabilitációban is támogatást nyújtok.</p>
+  <p>Hiszek abban, hogy mindenki számára létezik egyéni, jól működő megoldás, és ebben segítek neked is.</p>
+  </div>
+    <div style="flex: 1; min-width: 200px; text-align: center;">
+      <img src="DSC_0007.png" alt="Galambos Gergely gyógytornász" style="width: 100%; max-width: 250px; border-radius: 10px;" />
+    </div>
+  </div>
+</section>
+
+<section id="kepzettseg">
+  <h2>Képzettségeim</h2>
+  <ul>
+    <li>Gyógytornász BSc – Pécsi Tudományegyetem</li>
+    <li>Gyógytornász Mesterképzés – Pécsi Tudományegyetem</li>
+    <li>Továbbképzések: manuálterápia, tape technikák, rehabilitációs tréning</li>
+  </ul>
+</section>
+
+<section id="szolgaltatasok">
+  <h2>Szolgáltatások</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Gerincgyógytorna</h3>
+      <p>Derék-, nyak- és hátfájdalmak kezelése egyéni tornával.</p>
+    </div>
+    <div class="card">
+      <h3>Rehabilitáció</h3>
+      <p>Műtétek és sérülések utáni mozgásfunkció helyreállítása.</p>
+    </div>
+    <div class="card">
+      <h3>Idősek tornája</h3>
+      <p>Biztonságos, életkorhoz igazított mozgásprogram.</p>
+    </div>
+  </div>
+</section>
+
+<section id="arak">
+  <h2>Árak</h2>
+  <ul>
+    <li>Egyéni kezelés (50 perc / alkalom): </li>
+      <ul style="list-style-type: disc; margin-top: 5px;">
+        <li>1 alkalom: 8 000 Ft</li>
+        <li>5 alkalom: 38 000 Ft</li>
+        <li>10 alkalom: 69 500 Ft</li>
+      </ul>
+    <li>Páros torna (50 perc / alkalom): </li>
+      <ul style="list-style-type: disc; margin-top: 5px;">
+        <li>1 alkalom: 4 800 Ft</li>
+        <li>5 alkalom: 23 000 Ft</li>
+        <li>10 alkalom: 44 000 Ft</li>
+      </ul>
+    <li>Csoportos torna (50 perc / alkalom): </li>
+      <ul style="list-style-type: disc; margin-top: 5px;">
+        <li>1 alkalom: 3 200 Ft</li>
+        <li>5 alkalom: 15 500 Ft</li>
+        <li>10 alkalom: 29 000 Ft</li>
+      </ul>
+  </ul>
+</section>
+
+<section id="kapcsolat">
+  <h2>Elérhetőségek</h2>
+  <p>Telefon: +36 30 981 6499</p>
+  <p>Email: galambos.gergely12@gmail.com</p>
+  <p>Cím: 9700 Szombathely, Alsóhegyi út 18</p>
+</section>
+
+<footer>
+  <p>&copy; 2026 Galambos Gergely - Minden jog fenntartva</p>
+</footer>
+
+<script>
+  // Simple script to toggle the mobile menu open and closed
+  const toggleButton = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  toggleButton.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // Close menu when clicking a link on mobile
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+</script>
+
+</body>
+</html>
