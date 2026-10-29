@@ -28,6 +28,57 @@
       .nav-links { display: none; flex-direction: column; width: 100%; background: #134e4a; position: absolute; top: 100%; left: 0; padding: 10px 0; text-align: center; gap: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-height: calc(100vh - 60px); overflow-y: auto; }
       .nav-links.active { display: flex; }
     }
+
+    /* Contact section grid styles */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px 20px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #334155;
+      transition: all 0.2s ease;
+    }
+    .contact-card:hover {
+      background: #f1f5f9;
+      border-color: #0f766e;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(15, 118, 110, 0.08);
+    }
+    .contact-card.static {
+      cursor: default;
+    }
+    .contact-card.static:hover {
+      transform: none;
+      background: #f8fafc;
+      border-color: #e2e8f0;
+      box-shadow: none;
+    }
+    .contact-icon {
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+    .contact-card div {
+      display: flex;
+      flex-direction: column;
+    }
+    .contact-card strong {
+      color: #0f766e;
+      font-size: 14px;
+    }
+    .contact-card span:not(.contact-icon) {
+      font-size: 15px;
+      word-break: break-all;
+    }
   </style>
 </head>
 <body>
@@ -120,9 +171,54 @@
 
 <section id="kapcsolat">
   <h2>Elérhetőségek</h2>
-  <p>Telefon: +36 30 981 6499</p>
-  <p>Email: galambos.gergely12@gmail.com</p>
-  <p>Cím: 9700 Szombathely, Alsóhegyi út 18</p>
+  <p>Ha kérdésed van, vagy időpontot szeretnél foglalni, keress bizalommal az alábbi elérhetőségek egyikén:</p>
+  
+  <div class="contact-grid">
+    <!-- Telefon -->
+    <a href="tel:+36309816499" class="contact-card">
+      <span class="contact-icon">📞</span>
+      <div>
+        <strong>Telefon</strong>
+        <span>+36 30 981 6499</span>
+      </div>
+    </a>
+
+    <!-- Email -->
+    <a href="mailto:galambos.gergely12@gmail.com" class="contact-card">
+      <span class="contact-icon">✉️</span>
+      <div>
+        <strong>Email</strong>
+        <span>galambos.gergely12@gmail.com</span>
+      </div>
+    </a>
+
+    <!-- Cím -->
+    <div class="contact-card static">
+      <span class="contact-icon">📍</span>
+      <div>
+        <strong>Cím</strong>
+        <span>9700 Szombathely, Alsóhegyi út 18</span>
+      </div>
+    </div>
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/share/1AoM4bTg4R/" target="_blank" class="contact-card">
+      <span class="contact-icon">📘</span>
+      <div>
+        <strong>Facebook</strong>
+        <span>Kövess Facebookon</span>
+      </div>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/galambosgergely_gyogytorna" target="_blank" class="contact-card">
+      <span class="contact-icon">📷</span>
+      <div>
+        <strong>Instagram</strong>
+        <span>@galambosgergely_gyogytorna</span>
+      </div>
+    </a>
+  </div>
 </section>
 
 <footer>
